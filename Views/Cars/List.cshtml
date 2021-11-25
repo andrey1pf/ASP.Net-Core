@@ -1,0 +1,18 @@
+﻿<h1 style="margin-top: 70px;">Catalog of all cars</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var car in Model.allCars)
+        {
+            <div class="col-lg-5">
+                <img class="img-thumbnail" src="@car.img" alt="@car.name" />
+                <h2> @car.name </h2>
+                <p>@car.shortDesc</p>
+                <p>@car.longDesc</p>
+                <p> Price: @car.price.ToString("C2") </p>
+                <p><a class="btn btn-warning" href="https://vk.com/andrey_pf">More details</a></p>
+
+            </div>
+        }
+    }
+</div>
+
